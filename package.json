@@ -1,24 +1,31 @@
 {
   "name": "get-architecture",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Binary file architecture detector",
+  "license": "MIT",
+  "author": "Alex Swindler <acs7x@virginia.edu>",
   "repository": {
     "type": "git",
     "url": "git://github.com/axelstudios/get-architecture.git"
   },
   "main": "./index.js",
   "files": [
+    "dist",
+    "example.js",
     "index.js"
   ],
-  "author": "Alex Swindler <acs7x@virginia.edu>",
   "engines": {
     "node": "*"
   },
   "scripts": {
+    "build": "node_modules/.bin/babel index.js -o dist/get-architecture.js",
     "lint": "xo --space"
   },
-  "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "~7.1.5",
+    "@babel/core": "~7.1.6",
+    "@babel/preset-env": "~7.1.6",
+    "babel-preset-minify": "~0.5.0",
     "xo": "~0.23.0"
   }
 }
